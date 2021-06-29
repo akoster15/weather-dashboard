@@ -1,78 +1,36 @@
-*, *:before, *::after {
+.searcharea {
+    background-color: #e6f2ff;
+    padding: 20px;
+}
+
+.uvindex {
+    padding: 5px;
+}
+
+.one-fifth {
     box-sizing: border-box;
-}
-.navbar {
-        display: block;
-        text-align:center;
-        float: none;
-}
-
-body {
-    margin: 2rem;
+    width: 20%;
+    margin: 5px;
+    padding: 5px;
+    
 }
 
-#currentDay {
-    vertical-align: middle;
-}
-.bg-light {
-    padding-top: 1rem;
+.one-fifth:first-child {
+    margin-left: 0px;
 }
 
-.latest-city {
-    padding: 1rem 1.75rem;
+.one-fifth:last-child{
+    margin-right: 0px;
 }
 
-p {
-    line-height: 1rem;
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
 }
 
-li {
-    list-style: none;
-    padding: .5rem;
-    text-align: center;
-    border: 1px solid; border-color: #d3d3d3 ;
-    border-radius: 2px;
-    padding-bottom: .5rem
-}
-/* 5 Day Forecast Styling */
-.days {
-    color: #f5f5f5;
-    border: lightblue;
-    background-color: rgb(80, 123, 252);
-    padding: 1rem;
-    border: 1rem;
+#searchbtn{
+    padding: 6px 5px 0px 5px;
 
-}
-
-.days p {
-    font-size: .8rem;
-}
-/* UV Index background colors */
-.uv-low {
-    color :#ffffff;
-    background-color: rgb(47, 214, 119);
-    padding: .25rem .75rem;
-}
-
-.uv-moderate {
-    color: #000000;
-    background-color: rgb(252, 249, 61);
-    padding: .2rem .75rem;
-}
-
-.uv-high {
-    color: #000000;
-    background-color: rgb(240, 161, 14);
-    padding: .2rem .75rem;
-}
-.uv-veryHigh {
-    color: #ffffff;
-    background-color: rgb(194, 49, 49);
-    padding: .2rem .75rem;
-}
-
-.uv-extreme {
-    color: #ffffff;
-    background-color: rgb(151, 58, 151);
-    padding: .2rem .75rem;
 }
