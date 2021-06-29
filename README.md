@@ -5,5 +5,5 @@
 ![Screenshot](/assets/images/weather-dashboard-screenshot.png)
 
 # Links
-https://github.com/akoster15/weather-dashboard.git
-https://akoster15.github.io/weather-dashboard/
+- https://github.com/akoster15/weather-dashboard.git
+- https://akoster15.github.io/weather-dashboard/
