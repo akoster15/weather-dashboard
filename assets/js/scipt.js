@@ -147,3 +147,42 @@ function forecastWeather() {
         currentWeather()
     });
 }
+
+//List of button from searched cities 
+function renderCityButtons() {
+    $("#city-button").empty();
+
+    //Loop for going through array of cities
+    for (var i = 0; i < cities.length; i++) {
+        var newCity = $("<li>");
+        newCity.addClass("list-group-item");
+        newCity.attr("data-name", cities[i]);
+        newCity.text(cities[i]);
+        newCity.val("search-history");
+        $("#city-button").prepend(newCity);
+    }
+}
+
+let city =[""]
+
+//Search button for new city search
+$("#search-btn").on("click", function(event) {
+    event.preventDefault();
+
+    var city = $("#city-input").val().trim();
+    cities.push(city);
+   
+    renderCityButtons();
+    localStorage.setItem("city", JSON.stringify(cities));
+});
+
+//Return results for previously search cities
+$(document).on("click", "li", function () {
+
+    var chosenCity = $(this).attr("data-name")
+     
+    $("#city-input").val(chosenCity);
+  
+    forecastWeather()
+  
+});
