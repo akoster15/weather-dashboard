@@ -1,20 +1,34 @@
 //Variables
-var searchCity = $("#search-btn");
-var newCity = $("#city-button");
-var cityName = document.getElementById("#city-input");
-var temp = document.getElementById("#temp");
-var icon = document.getElementById("weather-icon");
-var humidity = document.getElementById("hum");
-var uvIndex = document.getElementById("#uv");
-var windSpeed = document.getElementById("#wind")
+const today = moment().format("dddd, MMMM Do, YYYY"); 
+const searchCity =  $("#search-btn"); 
+const newCityBtn = $("#city-button");
+const cityName = document.getElementById("#city-input"); 
+const temperature = document.getElementById("#temp"); 
+const icon = document.getElementById("weather-icon"); 
+const humidity = document.getElementById("hum"); 
+const windSpeed = document.getElementById("#wind"); 
+const uvIndex = document.getElementById("#uv"); 
+const forecastDay1 = moment().add(1,'days').format("MMM Do"); 
+const forecastDay2 = moment().add(2,'days').format("MMM Do");
+const forecastDay3 = moment().add(3,'days').format("MMM Do"); 
+const forecastDay4 = moment().add(4,'days').format("MMM Do"); 
+const forecastDay5 = moment().add(5,'days').format("MMM Do");
 
 //API Variables
-var apiKey = "e4113ca346b64a613160d1703c7cdbf0";
-var weatherApi = "https://api.openweathermap.org/data/2.5/weather?q";
-var forecastApi = "https://api.openweathermap.org/data/2.5/forecast?q=";
-var units = "units=imperial";
-var iconApi = "https://openweathermap.org/img/wn/";
+const apiKey = "&APPID=5accc33209d1c0dd9925ae90d4b60f93"; 
+const weatherApi = "https://api.openweathermap.org/data/2.5/weather?q=" 
+const forecastApi = "https://api.openweathermap.org/data/2.5/forecast?q=" 
+const uvApi =  "https://api.openweathermap.org/data/2.5/uvi?lat="; 
+const units =  "&units=imperial"; 
+const iconApi = "https://openweathermap.org/img/wn/"; 
 
+//Dates for current weather/5 day forecast
+$("#currentDay").append(today)
+$("#day-1").append(forecastDay1) 
+$("#day-2").append(forecastDay2)
+$("#day-3").append(forecastDay3) 
+$("#day-4").append(forecastDay4) 
+$("#day-5").append(forecastDay5)
 
 $(document).ready(function() {
 });
